@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <plugin id="cordova-plugin-iroot" version="3.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>iRoot</name>
-    <author>Elderov Ali (info@cyberkatze.de)</author>
+    <author>Joe Balan. A (joe.balan@codectrlsolutions.com)</author>
 
     <description>Jailbreak/Root Detection Plugin for Apache Cordova</description>
-    <keywords>cordova,jailbreak,jailbroken,cydia,detection,detector,root,rooted,rootBeer,android,ios,iroot,plugin</keywords>
+    <keywords>cordova,jailbreak,jailbroken,cydia,detection,detector,root,rooted,rootBeer,android,ios,iroot,plugin,proxy</keywords>
 
     <license>MIT</license>
 
-    <repo>https://github.com/WuglyakBolgoink/cordova-plugin-iroot</repo>
-    <issue>https://github.com/WuglyakBolgoink/cordova-plugin-iroot/issues</issue>
+    <repo>https://github.com/joebalan-git/cordova-plugin-iroot-v2</repo>
+    <issue>https://github.com/joebalan-git/cordova-plugin-iroot-v2/issues</issue>
 
     <engines>
         <engine name="cordova" version=">=10.0.0"/>
