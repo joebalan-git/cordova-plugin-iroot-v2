@@ -83,6 +83,47 @@ enum {
 
 
 
+- (void) isMiddleManProxyEnabled:(CDVInvokedUrlCommand*)command;
+{
+    CDVPluginResult *pluginResult;
+
+    @try
+    {
+        bool getMiddleManStatus = [self getMiddleManStatus];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:getMiddleManStatus];
+    }
+    @catch (NSException *exception)
+    {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:exception.reason];
+    }
+    @finally
+    {
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    }
+}
+
+
+
+
+- (BOOL)getMiddleManStatus {
+
+    CFDictionaryRef dicRef = CFNetworkCopySystemProxySettings();
+
+    const CFStringRef proxyCFstr = CFDictionaryGetValue(dicRef, (const void*)kCFNetworkProxiesHTTPProxy);
+
+    CFRelease(dicRef);
+
+    NSString *proxy = (__bridge NSString*)(proxyCFstr);
+
+    if(proxy) {
+
+        return YES;
+
+    }
+    return NO;
+
+}
+
 
 - (bool) jailbroken {
 

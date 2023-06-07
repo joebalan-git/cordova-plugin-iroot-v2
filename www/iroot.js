@@ -93,5 +93,8 @@ module.exports = {
     },
     isRootedWithBusyBoxWithEmulator: function(onSuccess, onError) {
         exec(onSuccess, onError, 'IRoot', 'isRootedWithBusyBoxWithEmulator', []);
-    }
+    },
+    isMiddleManProxyEnabled: function(onSuccess, onError) {
+        exec(onSuccess, onError, 'IRoot', 'isMiddleManProxyEnabled', []);
+    },
 };

@@ -5,6 +5,8 @@
 interface IRootPlugin {
     isRooted(onSuccess: (boolean) => void, onError: (any) => void): void;
 
+    isMiddleManProxyEnabled(onSuccess: (boolean) => void, onError: (any) => void): void;
+
     isRootedWithBusyBox(onSuccess: (boolean) => void, onError: (any) => void): void;
 
     detectRootManagementApps(onSuccess: (boolean) => void, onError: (any) => void): void;
