@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-iroot-v2",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "Jailbreak/Root Detection Plugin for Apache Cordova with Proxy Detection for iOS",
   "types": "./types/index.d.ts",
   "cordova": {
