@@ -529,8 +529,15 @@ enum {
     do {
         // Add to the size
         size += size / 10;
-        // Get the new process
-        newprocess = realloc(process, size);
+        // Added try catch below to avoid app crashes in some devices...
+        @try
+        {
+            // Get the new process
+            newprocess = realloc(process, size);
+        }
+        @catch (NSException *exception){
+            // do nothing...
+        }
         // If the process selected doesn't exist
         if (!newprocess){
             // But the process exists
